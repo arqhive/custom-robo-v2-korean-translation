@@ -1,4 +1,4 @@
-커스텀 로보 V2 (N64) 한글 패치 {VERSION}
+커스텀 로보 V2 (N64) 한글 패치 v1.0f
 제작: arqhive
 
 「カスタムロボV2」(N64, 일본판) 비공식 한국어 팬 패치입니다.
@@ -15,7 +15,17 @@
 
 [적용 방법]
 
-1. 패치 프로그램에서 원본 롬과 NCZJ_KPatch_{VERSION}.xdelta 를 고릅니다.
+패치 파일은 두 가지이며, 하나만 고르면 됩니다.
+
+- NCZJ_KPatch_v1.0f.xdelta
+  기본판. RMG, Wii U 버추얼 콘솔(UWUVCI)에서 쓰세요.
+- NCZJ_KPatch_v1.0f_EEPROM16K.xdelta
+  안드로이드 에뮬레이터(M64Plus FZ, RetroArch, Lemuroid 등)처럼 세이브 종류를
+  직접 고를 수 없는 에뮬레이터용. 롬 헤더에 「16K EEPROM」 표시를 넣어,
+  mupen64plus 계열 에뮬레이터가 설정 없이도 세이브를 16K로 잡게 했습니다.
+  내용(대사·그림)은 기본판과 같습니다.
+
+1. 패치 프로그램에서 원본 롬과 고른 xdelta 를 고릅니다.
 2. 적용하면 한글판 롬이 만들어집니다.
 3. 만들어진 롬의 해시가 아래 「패치 후」와 같은지 확인합니다.
 
@@ -28,16 +38,24 @@
     MD5     115118dd5e0f02d82ba1bf070a7b78f1
     SHA-256 60acf8dc7361f155ec8c987f75c6988ca1b0ccd36baefaffd67c24af6d21ace1
 
-  패치 후({VERSION})
+  패치 후(v1.0f)
     크기    16,777,216 바이트
-    CRC32   {RESULT_CRC32}
-    MD5     {RESULT_MD5}
-    SHA-256 {RESULT_SHA256}
+    CRC32   5A13917F
+    MD5     1f5415c7dcd2010be9bcc2d89c502f94
+    SHA-256 13fd9e0be063d3f82d5cb26dc9fdddad60b9bb2ffa4a6865bf2e189bec36ea69
+
+  패치 후(v1.0f EEPROM16K판)
+    크기    16,777,216 바이트
+    CRC32   C4020976
+    MD5     7edadcf7051c288b7768bf3ec47c155c
+    SHA-256 42f22d46d962866c6e8af6230fc89ab7c8d77cb131eeaba845918ca4872dc7da
 
 
 [실행 환경]
 
 - 확인함: RMG(Rosalie's Mupen GUI), Wii U 버추얼 콘솔(UWUVCI 주입, 베이스 Mario Golf US).
+- EEPROM16K판: RMG에서 별도 설정 없이 16K 세이브로 잡히고 진행되는 것을 확인했습니다.
+  안드로이드 기기에서는 직접 확인하지 못했습니다.
 
 
 [알려진 문제]
@@ -46,9 +64,10 @@
   파츠 설명은 문장 끝 마침표를 생략했습니다.
 - 이 게임의 세이브는 16K EEPROM입니다. 에뮬레이터는 롬 해시로 세이브 종류를 정하는데,
   패치한 롬은 해시가 달라 에뮬레이터가 모르는 롬으로 보고 4K로 잡을 수 있습니다.
-  이때는 저장이 깨지거나 게임이 멈출 수 있으니, 에뮬레이터 설정에서 세이브 종류를
-  16K EEPROM으로 직접 맞춰 주세요. Wii U 버추얼 콘솔(UWUVCI)은 기본 INI가 16K EEPROM이라
-  그대로 쓰면 됩니다.
+  이때는 저장이 깨지거나 새 게임으로 시나리오에 들어갈 때 게임이 멈출 수 있으니,
+  에뮬레이터 설정에서 세이브 종류를 16K EEPROM으로 직접 맞춰 주세요.
+  설정할 수 없는 에뮬레이터(안드로이드 등)는 EEPROM16K판 패치를 쓰세요.
+  Wii U 버추얼 콘솔(UWUVCI)은 기본 INI가 16K EEPROM이라 기본판을 그대로 쓰면 됩니다.
 
 
 [참고]
