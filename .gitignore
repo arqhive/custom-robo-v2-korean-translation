@@ -1,0 +1,20 @@
+# 롬·빌드 결과·패치 파일(배포는 릴리즈로)
+*.z64
+*.v64
+*.n64
+*.xdelta
+build/
+release/
+__pycache__/
+
+# 원본 롬에서 뽑는 추출물·원문 자료·그림 작업물(커밋하지 않음)
+manifests/
+work/extracted/
+work/graphics/
+work/survey/
+work/review/
+work/translation/*.json
+work/translation/batches/
+work/translation/desc/
+work/translation/comma/
+tools/bin/
